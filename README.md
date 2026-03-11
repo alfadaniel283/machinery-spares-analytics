@@ -76,7 +76,7 @@ Data preprocessing steps include:
 - Standardizing part names and IDs
 - Formatting date fields
 - all using excel
-- ![Dashboard](assets/Screenshot 2026-03-11 121151.png)
+![Dashboard](assets/data)
 
 
 
@@ -89,7 +89,7 @@ Key metrics calculated include:
 - Monthly consumption trends
 - Machine-specific spare part demand
 
-![Dashboard](assets/Screenshot 2026-03-11 121559.png)
+![Dashboard](assets/report)
 
 ### 4. Identification of High-Consumption Parts
 
