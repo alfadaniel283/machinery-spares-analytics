@@ -14,7 +14,7 @@ The analysis aims to help maintenance teams, procurement departments, and operat
 
 The main objectives of this project are to:
 
-- Analyze historical spare parts consumption data
+- Analyze historical spare parts consumption data, across various department
 - Identify spare parts with **high usage rates**
 - Detect **usage patterns and trends**
 - Highlight **critical components** that require frequent replacement
@@ -44,14 +44,12 @@ Typical dataset features include:
 
 | Column | Description |
 |------|-------------|
-| Part ID | Unique identifier for each spare part |
-| Part Name | Name or description of the spare part |
-| Machine ID | Machine associated with the spare part |
-| Consumption Quantity | Number of parts used |
-| Date | Date of usage or replacement |
-| Department | Department responsible for maintenance |
-| Supplier | Spare part vendor |
-| Cost | Cost per spare part unit |
+| Department | department where of consumption |
+| Rep & Main Cost | Repair and maintenance Cost |
+| Average Monthly Rep & Main Cost | Average Repair and Maintenance cost for the period of 3month |
+| Total Percentage | Various department spending percentages |
+| Total Average Percentage | Average Percentage |
+
 
 The dataset may originate from:
 
@@ -59,6 +57,7 @@ The dataset may originate from:
 - Inventory management systems
 - ERP systems
 - Spare parts request records
+- Store issued records
 
 ---
 
@@ -67,7 +66,7 @@ The dataset may originate from:
 The project follows a structured data analysis workflow:
 
 ### 1. Data Collection
-Spare parts consumption data is gathered from maintenance and inventory systems.
+Spare parts consumption data is gathered from maintenance and inventory systems, store issue logs.
 
 ### 2. Data Cleaning
 Data preprocessing steps include:
@@ -76,17 +75,12 @@ Data preprocessing steps include:
 - Removing duplicates
 - Standardizing part names and IDs
 - Formatting date fields
+- all using excel
+- ![Dashboard](assets/Screenshot 2026-03-11 121151.png)
 
-### 3. Exploratory Data Analysis (EDA)
 
-EDA is performed to understand the structure and distribution of the data, including:
 
-- Spare parts consumption frequency
-- Machine-level spare parts usage
-- Cost distribution
-- Time-based usage patterns
-
-### 4. Consumption Analysis
+### 3. Consumption Analysis
 
 Key metrics calculated include:
 
@@ -95,68 +89,37 @@ Key metrics calculated include:
 - Monthly consumption trends
 - Machine-specific spare part demand
 
-### 5. Identification of High-Consumption Parts
+![Dashboard](assets/Screenshot 2026-03-11 121559.png)
+
+### 4. Identification of High-Consumption Parts
 
 Spare parts are ranked based on:
 
 - Total quantity consumed
 - Frequency of replacement
 - Operational importance
+- Based on department
 
 This helps identify **critical spare parts that require priority stocking**.
 
-### 6. Visualization
 
-Insights are presented using visualizations such as:
-
-- Bar charts
-- Trend lines
-- Pareto charts
-- Consumption ranking plots
-
----
 
 ## Tools and Technologies
 
 This project uses the following tools:
 
-- **Python**
-- **Pandas** – Data analysis and manipulation
-- **NumPy** – Numerical computations
-- **Matplotlib / Seaborn** – Data visualization
-- **Jupyter Notebook** – Interactive analysis
-- **CSV / Excel datasets**
+- **Excel datasets**
+- **Excel Pivot table**
 
 ---
 
-## Project Structure
 
-```bash
-machinery-spare-parts-analysis/
-│
-├── data/
-│   ├── raw_data.csv
-│   └── cleaned_data.csv
-│
-├── notebooks/
-│   └── spare_parts_analysis.ipynb
-│
-├── scripts/
-│   └── data_cleaning.py
-│
-├── visuals/
-│   └── charts_and_graphs.png
-│
-└── README.md
-```
-
----
 
 ## Example Analysis Outputs
 
 Expected outputs from this project include:
 
-- Ranking of spare parts by consumption
+- Ranking of spare parts by consumption for the period of 3months
 - Identification of top 10 high-consumption spare parts
 - Machine-level spare parts usage analysis
 - Spare parts cost impact analysis
@@ -175,21 +138,6 @@ Insights generated from this analysis can be used for:
 - Maintenance cost control
 
 ---
-
-## Future Improvements
-
-Possible future developments include:
-
-- Predictive demand forecasting for spare parts
-- Machine learning models for maintenance prediction
-- Real-time dashboard using **Power BI** or **Tableau**
-- Automated alerts for critical spare parts stock levels
-
----
-
-## Author
-
-**Dalfa**
 
 Data Analytics | Operations Analysis
 
