@@ -56,8 +56,7 @@ The dataset may originate from:
 - Maintenance logs
 - Inventory management systems
 - ERP systems
-- Spare parts request records
-- Store issued records
+- Store issue records
 
 ---
 
